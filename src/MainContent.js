@@ -12,7 +12,7 @@ const MainContainer = styled.div`
   justify-content: center;
   align-items: center;
   padding: 50px -10px;
-  background-color: #fff;
+  background-color: #FCF9F4;
   position: relative;
   height: 500px; /* Ajusta según sea necesario */
   margin-top: 20px; /* Subir el contenido para que se muestre en conjunto con los otros elementos */

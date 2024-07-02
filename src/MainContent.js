@@ -15,7 +15,7 @@ const MainContainer = styled.div`
   background-color: #FCF9F4;
   position: relative;
   height: 500px; /* Ajusta según sea necesario */
-  margin-top: 20px; /* Subir el contenido para que se muestre en conjunto con los otros elementos */
+  margin-top: 1px; /* Subir el contenido para que se muestre en conjunto con los otros elementos */
 `;
 
 const Image1 = styled.img`

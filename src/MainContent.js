@@ -179,7 +179,7 @@ const CircleTextImage = styled.img`
 `;
 
 const MainContent = () => {
-  const whatsappLink = 'https://wa.me/573236024169';
+  const whatsappLink = 'https://wa.me/573106819768';
   return (
     <MainContainer>
       <CircleTextImage src={circleTextImage} alt="Circle Text" />

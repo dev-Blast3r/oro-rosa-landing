@@ -26,7 +26,7 @@ const InfoItem = styled.div`
   span {
     font-size: 1rem;
   }
-    
+
   @media (max-width: 768px) {
     span {
       font-size: 0.8rem; /* Ajustar tamaño de fuente en pantallas pequeñas */
@@ -39,7 +39,7 @@ const TopBar = () => {
     <TopBarContainer>
       <InfoItem>
         <i className="fas fa-phone-alt"></i>
-        <span>+57 323 6024169</span>
+        <span>+57 310 6819768</span>
       </InfoItem>
       <InfoItem>
         <i className="fas fa-map-marker-alt"></i>

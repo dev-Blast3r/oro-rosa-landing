@@ -34,6 +34,11 @@ const SocialIcon = styled.img`
   width: 40px;
   height: 40px;
 
+  &:hover {
+      transform: scale(1.2);
+      filter: brightness(1.2);
+    }
+
   @media (max-width: 768px) {
     width: 25px;
     height: 25px;

@@ -12,13 +12,17 @@ const MainContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 50px -10px;
+  padding: 50px 20px;
   background-color: #FCF9F4;
   position: relative;
   height: 500px; /* Ajusta según sea necesario */
-  margin-top: -5px; /* Subir el contenido para que se muestre en conjunto con los otros elementos */
-  margin-left: -80px;
-  margin-right: -100px;
+  
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: auto;
+    margin-top: 0;
+  }
 `;
 
 const Image1 = styled.img`
@@ -28,6 +32,13 @@ const Image1 = styled.img`
   width: 220px;
   height: auto;
   z-index: 1;
+
+  @media (max-width: 768px) {
+    position: relative;
+    left: auto;
+    width: 150px;
+    margin-bottom: 20px;
+  }
 `;
 
 const Image2 = styled.img`
@@ -37,6 +48,14 @@ const Image2 = styled.img`
   width: 240px;
   height: 100;
   z-index: 2;
+
+  @media (max-width: 768px) {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 150px;
+    margin-bottom: 20px;
+  }
 `;
 
 const TextContainer = styled.div`
@@ -52,7 +71,12 @@ const TextContainer = styled.div`
     margin-bottom: 25px;
     font-family: 'Berretti', sans-serif; 
     line-height: 1.2;
-    font-weight: normal; 
+    font-weight: normal;
+    
+     @media (max-width: 768px) {
+      font-size: 2rem;
+      margin-top: 40px;
+    }
   }
 
   p {
@@ -60,6 +84,10 @@ const TextContainer = styled.div`
     color: #777;
     font-family: arial, sans-serif; 
     margin-bottom: 20px;
+
+    @media (max-width: 768px) {
+      font-size: 1rem;
+    }
   }
 
   a {
@@ -121,6 +149,14 @@ const Image3 = styled.img`
   width: 450px;
   height: 500px;
   z-index: 1;
+
+  @media (max-width: 768px) {
+    position: relative;
+    right: auto;
+    width: 300px;
+    height: 400px;
+    margin: 20px 0;
+  }
 `;
 
 const CircleTextImage = styled.img`
@@ -131,10 +167,19 @@ const CircleTextImage = styled.img`
   height: 300px;
   z-index: 0;
   animation: rotate 10s linear infinite;
+
+  @media (max-width: 768px) {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+  }
 `;
 
 const MainContent = () => {
-    const whatsappLink = 'https://wa.me/573236024169';
+  const whatsappLink = 'https://wa.me/573236024169';
   return (
     <MainContainer>
       <CircleTextImage src={circleTextImage} alt="Circle Text" />
@@ -151,7 +196,7 @@ const MainContent = () => {
           </button>
         </a>
       </TextContainer>
-      
+
       <Image3 src={cake3} alt="Cake 3" />
     </MainContainer>
   );

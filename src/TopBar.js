@@ -11,15 +11,26 @@ const TopBarContainer = styled.div`
   justify-content: flex-start; /* Cambia esto a flex-start para alinear a la izquierda */
   align-items: center;
   font-size: 0.9rem;
+  flex-wrap: wrap;
 `;
 
 const InfoItem = styled.div`
   display: flex;
   align-items: center;
   margin: 0 15px;
-
+  flex-wrap: wrap;
   i {
     margin-right: 5px;
+  }
+
+  span {
+    font-size: 1rem;
+  }
+    
+  @media (max-width: 768px) {
+    span {
+      font-size: 0.8rem; /* Ajustar tamaño de fuente en pantallas pequeñas */
+    }
   }
 `;
 

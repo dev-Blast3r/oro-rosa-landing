@@ -8,7 +8,7 @@ const TopBarContainer = styled.div`
   color: #fff;
   padding: 10px 0;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start; /* Cambia esto a flex-start para alinear a la izquierda */
   align-items: center;
   font-size: 0.9rem;
 `;

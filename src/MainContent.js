@@ -6,6 +6,7 @@ import cake1 from './cake1.png'; // Asegúrate de tener la imagen cake1 en la ca
 import cake2 from './cake2.png'; // Asegúrate de tener la imagen cake2 en la carpeta src
 import cake3 from './cake3.png'; // Asegúrate de tener la imagen cake3 en la carpeta src
 import circleTextImage from './circleTextImage.png';
+import whatsappIcon from './whatsapp-icon.png';
 
 const MainContainer = styled.div`
   display: flex;
@@ -15,7 +16,9 @@ const MainContainer = styled.div`
   background-color: #fff;
   position: relative;
   height: 500px; /* Ajusta según sea necesario */
-  margin-top: 20px; /* Subir el contenido para que se muestre en conjunto con los otros elementos */
+  margin-top: -5px; /* Subir el contenido para que se muestre en conjunto con los otros elementos */
+  margin-left: -80px;
+  margin-right: -100px;
 `;
 
 const Image1 = styled.img`
@@ -41,6 +44,7 @@ const TextContainer = styled.div`
   z-index: 3;
   max-width: 600px;
   margin: 0 auto;
+  margin-top: -60px;
 
   h1 {
     font-size: 5rem;
@@ -58,22 +62,57 @@ const TextContainer = styled.div`
     margin-bottom: 20px;
   }
 
+  a {
+    text-decoration: none;
+  }
+
   button {
-    background-color: #25D366;
-    color: #fff;
-    border: 2px solid #25D366;
-    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #D29990; /* Borde grueso para el rectángulo */
+    padding: 10px 30px; /* Ajuste del padding para parecerse más al diseño */
     font-size: 1.2rem;
     font-family: 'Arial', sans-serif;
-    border-radius: 5px;
+    border-radius: 0; /* Ajuste de border-radius a 0 para eliminar bordes redondeados */
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0 auto;
+    position: relative;
 
     &:hover {
       background-color: #fff;
-      color: #25D366;
+      color: #D29990;
+    }
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
+
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      border: 1px solid #D29990;
+      pointer-events: none;
+    }
+
+    &::before {
+      top: 100%; /* Línea en la parte inferior */
+      left: 0;
+      right: 0;
+    }
+
+    &::after {
+      top: 0;
+      bottom: 0;
+      left: 100%; /* Línea en el lado izquierdo */
     }
   }
+
 `;
 
 const Image3 = styled.img`
@@ -95,6 +134,7 @@ const CircleTextImage = styled.img`
 `;
 
 const MainContent = () => {
+    const whatsappLink = 'https://wa.me/573236024169';
   return (
     <MainContainer>
       <CircleTextImage src={circleTextImage} alt="Circle Text" />
@@ -103,8 +143,15 @@ const MainContent = () => {
       <TextContainer>
         <h1>PASTELES CREATIVOS & EXQUISITOS</h1>
         <p>Deliciosos pasteles creativos y meme cakes para toda ocasión</p>
-        <button>¡PIDE EL TUYO!</button>
+        {/* <button>¡PIDE EL TUYO!</button> */}
+        <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+          <button>
+            <img src={whatsappIcon} alt="WhatsApp" />
+            ¡PIDE EL TUYO!
+          </button>
+        </a>
       </TextContainer>
+      
       <Image3 src={cake3} alt="Cake 3" />
     </MainContainer>
   );

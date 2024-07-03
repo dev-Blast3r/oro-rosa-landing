@@ -51,9 +51,9 @@ const HeaderSection = () => {
       <Logo src={logo} alt="Oro Rosa Pastelería Logo" />
       <Spacer /> {/* Otro espacio vacío para empujar los iconos a la derecha */}
       <SocialIcons>
-        <a href="#"><SocialIcon src={whatsappIcon} alt="WhatsApp" /></a>
-        <a href="#"><SocialIcon src={instagramIcon} alt="Instagram" /></a>
-        <a href="#"><SocialIcon src={facebookIcon} alt="Facebook" /></a>
+        <a href="https://wa.me/573236024169"><SocialIcon src={whatsappIcon} alt="WhatsApp" /></a>
+        <a href="https://www.instagram.com/ororosa_pasteleria/"><SocialIcon src={instagramIcon} alt="Instagram" /></a>
+        <a href="https://www.facebook.com/people/Oro-Rosa-Pastelería/100089828634111/"><SocialIcon src={facebookIcon} alt="Facebook" /></a>
       </SocialIcons>
     </HeaderContainer>
   );

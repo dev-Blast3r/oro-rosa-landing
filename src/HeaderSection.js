@@ -33,6 +33,11 @@ const SocialIcons = styled.div`
 const SocialIcon = styled.img`
   width: 40px;
   height: 40px;
+
+  @media (max-width: 768px) {
+    width: 25px;
+    height: 25px;
+  }
 `;
 
 const Spacer = styled.div`

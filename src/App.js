@@ -8,6 +8,11 @@ import NavBar from './NavBar';
 import MainContent from './MainContent';
 import CategoryPage from './CategoryPage'; // Asegúrate de tener este componente
 import './App.css';
+import TortasClasicasPage from './TortasClasicasPage';
+import MemeCakesPage from './MemeCakesPage';
+import PastelesDeGradoPage from './PastelesDeGradoPage';
+import PersonalizadosPage from './PersonalizadosPage';
+
 
 function App() {
   return (
@@ -23,6 +28,10 @@ function App() {
           
           {/* Ruta dinámica para las páginas de categorías */}
           <Route path="/categoria/:categoryName" element={<CategoryPage />} />
+          <Route path="/tortas-clasicas" element={<TortasClasicasPage />} />
+        <Route path="/meme-cakes" element={<MemeCakesPage />} />
+        <Route path="/pasteles-de-grado" element={<PastelesDeGradoPage />} />
+        <Route path="/personalizados" element={<PersonalizadosPage />} />
         </Routes>
       </div>
     </Router>

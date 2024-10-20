@@ -11,6 +11,50 @@ import Catalog from './Catalog'; // Componente de categorías
 import ImageUpload from './ImageUpload'; // Componente de subida de imágenes
 import CategoryPage from './CategoryPage';
 
+// Estilo para el botón flotante de WhatsApp
+// Estilo para el botón flotante de WhatsApp con fondo blanco y borde
+const FloatingWhatsAppButton = styled.a`
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #fff; /* Fondo blanco */
+  color: #25d366; /* Color de WhatsApp */
+  border-radius: 50px;
+  border: 2px solid #25d366; /* Borde verde de WhatsApp */
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 1000;
+
+  &:hover {
+    background-color: #25d366;
+    color: #fff;
+  }
+
+  img {
+    width: 35px;
+    height: 35px;
+    margin-top: 12px; /* Centra el ícono verticalmente */
+  }
+
+  @media (max-width: 768px) {
+    width: 50px;
+    height: 50px;
+    right: 20px;
+    bottom: 20px;
+
+    img {
+      width: 25px;
+      height: 25px;
+      margin-top: 12px;
+    }
+  }
+`;
+
+
+
 const MainContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -233,9 +277,13 @@ const MainContent = () => {
       <CatalogContainer>
       <h2>Explora Nuestro Catálogo</h2>
       <Catalog />
-      <h3>Sube Tus Imágenes</h3>
+      {/* <h3>Sube Tus Imágenes</h3> */}
       {/* <ImageUpload /> */}
     </CatalogContainer>
+    {/* Ícono flotante de WhatsApp */}
+    <FloatingWhatsAppButton href={whatsappLink} target="_blank" rel="noopener noreferrer">
+        <img src={whatsappIcon} alt="WhatsApp" />
+      </FloatingWhatsAppButton>
     </>
   );
 };

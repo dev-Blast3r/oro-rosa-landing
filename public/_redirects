@@ -1,2 +1,4 @@
 # Redirige todo el tráfico HTTP a HTTPS
-http://ororosapasteleria.com/* https://ororosapasteleria.com/:splat 301!
+# http://ororosapasteleria.com/* https://ororosapasteleria.com/:splat 301!
+/*  https://ororosapasteleria.com/:splat  301!
+

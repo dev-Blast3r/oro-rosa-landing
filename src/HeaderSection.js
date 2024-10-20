@@ -33,6 +33,16 @@ const SocialIcons = styled.div`
 const SocialIcon = styled.img`
   width: 40px;
   height: 40px;
+
+  &:hover {
+      transform: scale(1.2);
+      filter: brightness(1.2);
+    }
+
+  @media (max-width: 768px) {
+    width: 25px;
+    height: 25px;
+  }
 `;
 
 const Spacer = styled.div`
@@ -46,9 +56,9 @@ const HeaderSection = () => {
       <Logo src={logo} alt="Oro Rosa Pastelería Logo" />
       <Spacer /> {/* Otro espacio vacío para empujar los iconos a la derecha */}
       <SocialIcons>
-        <a href="#"><SocialIcon src={whatsappIcon} alt="WhatsApp" /></a>
-        <a href="#"><SocialIcon src={instagramIcon} alt="Instagram" /></a>
-        <a href="#"><SocialIcon src={facebookIcon} alt="Facebook" /></a>
+        <a href="https://wa.me/573106819768"><SocialIcon src={whatsappIcon} alt="WhatsApp" /></a>
+        <a href="https://www.instagram.com/ororosa_pasteleria/"><SocialIcon src={instagramIcon} alt="Instagram" /></a>
+        <a href="https://www.facebook.com/people/Oro-Rosa-Pastelería/100089828634111/"><SocialIcon src={facebookIcon} alt="Facebook" /></a>
       </SocialIcons>
     </HeaderContainer>
   );

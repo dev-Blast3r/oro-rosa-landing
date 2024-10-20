@@ -10,12 +10,23 @@ const NavBarContainer = styled.nav`
   background-color: #f8f8f8;
   padding: 10px 0;
   font-family: 'Montserrat', sans-serif;
+
+  @media (max-width: 768px) {
+    flex-direction: column; /* Cambiar dirección del flex a columna en pantallas pequeñas */
+    align-items: center;
+  }
 `;
 
 const NavList = styled.ul`
   list-style: none;
   display: flex;
   gap: 30px;
+
+  @media (max-width: 768px) {
+    flex-direction: column; /* Cambiar dirección del flex a columna en pantallas pequeñas */
+    gap: 15px;
+    margin-left: -40px;
+  }
 `;
 
 const NavItem = styled.li`

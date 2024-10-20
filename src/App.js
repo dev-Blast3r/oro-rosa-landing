@@ -12,7 +12,7 @@ import TortasClasicasPage from './TortasClasicasPage';
 import MemeCakesPage from './MemeCakesPage';
 import FechasEspecialesPage from './FechasEspecialesPage';
 import PersonalizadosPage from './PersonalizadosPage';
-
+import ContactoPage from './ContactoPage';
 
 function App() {
   return (
@@ -29,9 +29,10 @@ function App() {
           {/* Ruta dinámica para las páginas de categorías */}
           <Route path="/categoria/:categoryName" element={<CategoryPage />} />
           <Route path="/tortas-clasicas" element={<TortasClasicasPage />} />
-        <Route path="/meme-cakes" element={<MemeCakesPage />} />
-        <Route path="/fechas-especiales" element={<FechasEspecialesPage />} />
-        <Route path="/personalizados" element={<PersonalizadosPage />} />
+          <Route path="/meme-cakes" element={<MemeCakesPage />} />
+          <Route path="/fechas-especiales" element={<FechasEspecialesPage />} />
+          <Route path="/personalizados" element={<PersonalizadosPage />} />
+          <Route path="/contacto" element={<ContactoPage />} />
         </Routes>
       </div>
     </Router>

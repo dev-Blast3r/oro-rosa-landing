@@ -10,7 +10,7 @@ import CategoryPage from './CategoryPage'; // Asegúrate de tener este component
 import './App.css';
 import TortasClasicasPage from './TortasClasicasPage';
 import MemeCakesPage from './MemeCakesPage';
-import PastelesDeGradoPage from './PastelesDeGradoPage';
+import FechasEspecialesPage from './FechasEspecialesPage';
 import PersonalizadosPage from './PersonalizadosPage';
 
 
@@ -30,7 +30,7 @@ function App() {
           <Route path="/categoria/:categoryName" element={<CategoryPage />} />
           <Route path="/tortas-clasicas" element={<TortasClasicasPage />} />
         <Route path="/meme-cakes" element={<MemeCakesPage />} />
-        <Route path="/pasteles-de-grado" element={<PastelesDeGradoPage />} />
+        <Route path="/fechas-especiales" element={<FechasEspecialesPage />} />
         <Route path="/personalizados" element={<PersonalizadosPage />} />
         </Routes>
       </div>

@@ -1,10 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
-// Asegúrate de tener las imágenes en la carpeta correcta
-import cake1 from './cake1.png';
-import cake2 from './cake2.png';
-import cake3 from './cake3.png';
+// Importa las imágenes por categoría
+import clasico1 from './images/clasico1.JPG';
+import memecake1 from './images/memecake1.JPG';
+import fechas_especiales1 from './images/fechas_especiales1.JPG';
+import personalizado1 from './images/personalizado1.JPG';
 
 const CatalogContainer = styled.div`
   display: flex;
@@ -12,16 +14,7 @@ const CatalogContainer = styled.div`
   justify-content: center;
   padding: 50px;
   gap: 30px;
-  background-color: #fdf3f2; /* Fondo suave */
-`;
-
-const StyledLink = styled.a`
-  text-decoration: none; /* Elimina el subrayado */
-  color: inherit; /* Mantiene el color del texto */
-  
-  &:hover {
-    text-decoration: none; /* Asegura que no haya subrayado en hover */
-  }
+  background-color: #fdf3f2;
 `;
 
 const Category = styled.div`
@@ -32,11 +25,9 @@ const Category = styled.div`
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-  /* Borde con degradado ajustado a oro-rosa metálico */
   border: 2px solid transparent;
   background-image: linear-gradient(#fff, #fff), 
-                    linear-gradient(45deg, #e6b8b7, #f2d7d5, #f1c1b4, #f6d4cc); /* Oro rosa metálico más definido */
+                    linear-gradient(45deg, #e6b8b7, #f2d7d5, #f1c1b4, #f6d4cc);
   background-origin: border-box;
   background-clip: content-box, border-box;
 
@@ -68,6 +59,16 @@ const Category = styled.div`
   }
 `;
 
+// Estilos para quitar subrayado y modificar el color del enlace
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    color: #d29990; /* Cambiar color al hacer hover */
+  }
+`;
+
 const CatalogBottomSpace = styled.div`
   margin-bottom: 60px;
 `;
@@ -77,27 +78,27 @@ const Catalog = () => {
     <CatalogBottomSpace>
       <CatalogContainer>
         <Category>
-          <StyledLink href="/tortas-clasicas">
+          <StyledLink to="/tortas-clasicas">
             <h3>Tortas Clásicas</h3>
-            <img src={cake1} alt="Torta Clásica" />
+            <img src={clasico1} alt="Torta Clásica" />
           </StyledLink>
         </Category>
         <Category>
-          <StyledLink href="/meme-cakes">
+          <StyledLink to="/meme-cakes">
             <h3>Meme Cakes</h3>
-            <img src={cake2} alt="Meme Cake" />
+            <img src={memecake1} alt="Meme Cake" />
           </StyledLink>
         </Category>
         <Category>
-          <StyledLink href="/pasteles-de-grado">
-            <h3>Pasteles de Grado</h3>
-            <img src={cake3} alt="Pastel de Grado" />
+          <StyledLink to="/fechas-especiales">
+            <h3>Fechas Especiales</h3>
+            <img src={fechas_especiales1} alt="Fechas Especiales" />
           </StyledLink>
         </Category>
         <Category>
-          <StyledLink href="/personalizados">
+          <StyledLink to="/personalizados">
             <h3>Personalizados</h3>
-            <img src={cake3} alt="Pastel Personalizado" />
+            <img src={personalizado1} alt="Personalizados" />
           </StyledLink>
         </Category>
       </CatalogContainer>

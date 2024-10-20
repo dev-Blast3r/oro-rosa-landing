@@ -71,15 +71,15 @@ const NavBar = () => {
           <NavLink exact to="/" activeClassName="active">HOME</NavLink>
         </NavItem>
 
-        {/* Categorías */}
+        {/* Categorías: Asegúrate de que coincidan con App.js */}
         <NavItem>
-          <NavLink to="/categoria/tortas-clasicas" activeClassName="active">Tortas Clásicas</NavLink>
+          <NavLink to="/tortas-clasicas" activeClassName="active">Tortas Clásicas</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink to="/categoria/meme-cakes" activeClassName="active">Meme Cakes</NavLink>
+          <NavLink to="/meme-cakes" activeClassName="active">Meme Cakes</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink to="/categoria/fechas-especiales" activeClassName="active">Fechas Especiales</NavLink>
+          <NavLink to="/fechas-especiales" activeClassName="active">Fechas Especiales</NavLink>
         </NavItem>
 
         {/* CONTACTO */}

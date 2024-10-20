@@ -1,10 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-// Importa las imágenes de personalizados
-import personalizado1 from './images/personalizado1.JPG';
-import personalizado2 from './images/personalizado2.JPG';
-import personalizado3 from './images/personalizado3.JPG';
+// Importa las imágenes de pasteles de grado
+import graduacion1 from './images/fechas_especiales1.JPG';
+import graduacion2 from './images/fechas_especiales2.JPG';
 
 const PageContainer = styled.div`
   text-align: center;
@@ -81,29 +80,25 @@ const CatalogBottomSpace = styled.div`
   margin-bottom: 60px;
 `;
 
-const PersonalizadosPage = () => {
+const FechasEspecialesPage = () => {
   const sendMessage = (cakeType) => {
     return `https://wa.me/573236024169?text=${encodeURIComponent(
-      `Me interesa el pastel personalizado: ${cakeType}`
+      `Me interesa el Fechas Especiales: ${cakeType}`
     )}`;
   };
 
   return (
     <PageContainer>
-      <Title>Pasteles Personalizados</Title>
+      <Title>Fechas Especiales</Title>
       <CatalogBottomSpace>
         <CatalogContainer>
           <Category>
-            <img src={personalizado1} alt="Pastel Personalizado 1" />
-            <Button href={sendMessage('Pastel Personalizado 1')} target="_blank">Pedir</Button>
+            <img src={graduacion1} alt="Fechas Especiales 1" />
+            <Button href={sendMessage('Fechas Especiales 1')} target="_blank">Pedir</Button>
           </Category>
           <Category>
-            <img src={personalizado2} alt="Pastel Personalizado 2" />
-            <Button href={sendMessage('Pastel Personalizado 2')} target="_blank">Pedir</Button>
-          </Category>
-          <Category>
-            <img src={personalizado3} alt="Pastel Personalizado 3" />
-            <Button href={sendMessage('Pastel Personalizado 3')} target="_blank">Pedir</Button>
+            <img src={graduacion2} alt="Fechas Especiales 2" />
+            <Button href={sendMessage('Fechas Especiales 2')} target="_blank">Pedir</Button>
           </Category>
         </CatalogContainer>
       </CatalogBottomSpace>
@@ -111,4 +106,4 @@ const PersonalizadosPage = () => {
   );
 };
 
-export default PersonalizadosPage;
+export default FechasEspecialesPage;

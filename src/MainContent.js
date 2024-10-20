@@ -7,6 +7,9 @@ import cake2 from './cake2.png'; // Asegúrate de tener la imagen cake2 en la ca
 import cake3 from './cake3.png'; // Asegúrate de tener la imagen cake3 en la carpeta src
 import circleTextImage from './circleTextImage.png';
 import whatsappIcon from './whatsapp-icon.png';
+import Catalog from './Catalog'; // Componente de categorías
+import ImageUpload from './ImageUpload'; // Componente de subida de imágenes
+import CategoryPage from './CategoryPage';
 
 const MainContainer = styled.div`
   display: flex;
@@ -112,6 +115,26 @@ const TextContainer = styled.div`
       left: 100%; /* Línea en el lado izquierdo */
     }
   }
+  h1 {
+    font-size: 5rem;
+    color: #333;
+    margin-bottom: 25px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.2;
+    font-weight: 600; 
+  }
+  
+  p {
+    font-size: 0.9rem;
+    color: #777;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    font-family: 'Poppins', sans-serif;
+  }
+  
 
 `;
 
@@ -133,27 +156,42 @@ const CircleTextImage = styled.img`
   animation: rotate 10s linear infinite;
 `;
 
+const CatalogContainer = styled.div`
+  padding: 50px;
+  text-align: center;
+  background-color: #FFF5EE;
+`;
+
+
 const MainContent = () => {
     const whatsappLink = 'https://wa.me/573236024169';
   return (
-    <MainContainer>
-      <CircleTextImage src={circleTextImage} alt="Circle Text" />
-      <Image1 src={cake1} alt="Cake 1" />
-      <Image2 src={cake2} alt="Cake 2" />
-      <TextContainer>
-        <h1>PASTELES CREATIVOS & EXQUISITOS</h1>
-        <p>Deliciosos pasteles creativos y meme cakes para toda ocasión</p>
-        {/* <button>¡PIDE EL TUYO!</button> */}
-        <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-          <button>
-            <img src={whatsappIcon} alt="WhatsApp" />
-            ¡PIDE EL TUYO!
-          </button>
-        </a>
-      </TextContainer>
-      
-      <Image3 src={cake3} alt="Cake 3" />
-    </MainContainer>
+    <>
+      <MainContainer>
+        <CircleTextImage src={circleTextImage} alt="Circle Text" />
+        <Image1 src={cake1} alt="Cake 1" />
+        <Image2 src={cake2} alt="Cake 2" />
+        <TextContainer>
+          <h1>PASTELES CREATIVOS & EXQUISITOS</h1>
+          <p>Deliciosos pasteles creativos y meme cakes para toda ocasión</p>
+          {/* <button>¡PIDE EL TUYO!</button> */}
+          <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+            <button>
+              <img src={whatsappIcon} alt="WhatsApp" />
+              ¡PIDE EL TUYO!
+            </button>
+          </a>
+        </TextContainer>
+        
+        <Image3 src={cake3} alt="Cake 3" />
+      </MainContainer>
+      <CatalogContainer>
+      <h2>Explora Nuestro Catálogo</h2>
+      <Catalog />
+      <h3>Sube Tus Imágenes</h3>
+      {/* <ImageUpload /> */}
+    </CatalogContainer>
+    </>
   );
 };
 

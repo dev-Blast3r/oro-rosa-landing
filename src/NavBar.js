@@ -2,6 +2,7 @@
 
 import React from 'react';
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
 const NavBarContainer = styled.nav`
   display: flex;
@@ -23,24 +24,30 @@ const NavItem = styled.li`
   color: #333;
   cursor: pointer;
 
-  &:hover::after {
-    content: '▼';
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 0.8rem;
-  }
+  a {
+    text-decoration: none;
+    color: inherit;
+    padding: 5px 0;
+    transition: color 0.3s;
 
-  &.active::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background-color: #d29990;
-    width: 100%;
+    &:hover {
+      color: #d29990;
+    }
+
+    &.active {
+      color: #d29990;
+    }
+
+    &.active::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: #d29990;
+      width: 100%;
+    }
   }
 `;
 
@@ -48,9 +55,26 @@ const NavBar = () => {
   return (
     <NavBarContainer>
       <NavList>
-        <NavItem className="active">HOME</NavItem>
-        <NavItem>SOBRE NOSOTROS</NavItem>
-        <NavItem>CONTACTO</NavItem>
+        {/* HOME */}
+        <NavItem>
+          <NavLink exact to="/" activeClassName="active">HOME</NavLink>
+        </NavItem>
+
+        {/* Categorías */}
+        <NavItem>
+          <NavLink to="/categoria/tortas-clasicas" activeClassName="active">Tortas Clásicas</NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink to="/categoria/meme-cakes" activeClassName="active">Meme Cakes</NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink to="/categoria/fechas-especiales" activeClassName="active">Fechas Especiales</NavLink>
+        </NavItem>
+
+        {/* CONTACTO */}
+        <NavItem>
+          <NavLink to="/contacto" activeClassName="active">CONTACTO</NavLink>
+        </NavItem>
       </NavList>
     </NavBarContainer>
   );
